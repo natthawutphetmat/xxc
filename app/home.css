@@ -1,0 +1,72 @@
+@keyframes fadeInScaleUp {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .header-image {
+    width: 100%;
+    height: auto;
+    animation: fadeInScaleUp 1.5s ease-out forwards;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  img.bounce {
+    animation: bounce 3s infinite;
+  }
+  
+
+  .cut {
+    background: url('/img/linecut.gif');
+    height: 2.5px;
+  }
+
+
+
+  .bounce {
+    border-radius: 100px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: +100;
+}
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  img.bounce {
+    animation: bounce 3s infinite;
+  }
+
+
+
+
+
+
+
