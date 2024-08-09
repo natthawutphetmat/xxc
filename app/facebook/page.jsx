@@ -7,7 +7,7 @@ import Fbimg from './fbimg';
 
 
 
-export default function page() {
+export default function FacebookPage() {
   return (
 
 

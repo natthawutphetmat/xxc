@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function Example() {
+export default function AdsImage() {
   return (
     <Image
       src="/img/facebook_ads.webp"

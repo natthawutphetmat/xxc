@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function Example() {
+export default function Cass() {
   return (
     <Image
       src="/img/class.webp"

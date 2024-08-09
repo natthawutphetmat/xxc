@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Itemgg from './itemgg';
 
-export default function page() {
+export default function GooglePage() {
   return (
 
     <>

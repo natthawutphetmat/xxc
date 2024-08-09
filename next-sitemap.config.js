@@ -18,7 +18,7 @@
           return {
             loc: path,
             changefreq: 'daily',
-            priority: 0.8, // หรือค่าอื่นที่คุณต้องการใช้เป็น default
+            priority: 0.6, // หรือค่าอื่นที่คุณต้องการใช้เป็น default
             lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
           };
         },

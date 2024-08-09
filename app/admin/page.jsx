@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation'
 
 
 
-const App = () => {
+const Admin = () => {
     const [files, setFiles] = useState([]);
     const [title, setTitle] = useState('');
     const [headline, setHeadline] = useState('');
@@ -125,4 +125,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default Admin;

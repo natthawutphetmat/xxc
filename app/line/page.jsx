@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation'
 
 
-export default function page() {
+export default function LinePage() {
   const router = useRouter()
 
 useEffect(() =>{

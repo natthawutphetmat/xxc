@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function Example() {
+export default function Google() {
   return (
     <Image
       src="/img/head.webp"
