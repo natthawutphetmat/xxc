@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Script from "next/script";
+ 
 import About from './components/About';
 import AdsImage from './img/AdsImage';
 import Google from './img/google';
@@ -9,17 +9,12 @@ import Example from './img/Example';
 import Image from 'next/image';
 import Fbimg from './facebook/fbimg';
 import Itemgg from './google/itemgg';
+import Script from "next/script";
 
-
-export default function HomePage() {
+export default function Page() {
   return (
     <>
-
       <head>
-
-
-
-
         <title>รับทำโฆษณาออนไลน์ Googleสายเทา, Facebookสายเทา, คอร์สเรียนโฆษณาสายเทา สายเทาเพื่อธุรกิจของคุณ</title>
         <meta name="description" content="สำรวจโอกาสใหม่ๆกับทีมการตลาด รับยิงแอดโฆษณาสายเทา สายเทาที่จะช่วยคุณเติบโตด้วยกลยุทธ์การตลาดออนไลน์ที่ล้ำหน้าและเป็นนวัตกรรม แรงบันดาลใจจากทีมผู้เชี่ยวชาญที่มีประสบการณ์ เราช่วยสร้างผลลัพธ์ที่ยั่งยืนให้กับธุรกิจของคุณ." />
         <meta name="keywords" content="ยิงads,facebook,สายเทา,โฆษณา,ยิงads facebook สายเทา,รับยิงads,รับยิงแอด สายเทา,facebook ads,google ads,google,รับยิงแอด,ads,รับทำโฆษณา,รับโฆษณา,Facebook,การตลาด,โฆษณาออนไลน์,เว็บไซต์,ตลาดเป้าหมาย,โฆษณาบนโซเชียลมีเดีย,Google Ads,การโฆษณาบน Facebook,การโฆษณาออนไลน์บนสื่อต่าง ๆ,การตลาดออนไลน์,การโปรโมท,โฆษณา Facebook,การโฆษณา Google,การโฆษณาสินค้า,การโฆษณาโปรโมชั่น,วิธีการโฆษณา,ความสำเร็จในการตลาด,บริการโฆษณา,การตลาดออนไลน์บน Facebook,การโฆษณาบนเว็บ,การวางแผนโฆษณา,รับจ้างโฆษณา ยิงads,facebook,สายเทา,โฆษณา,ยิงads facebook สายเทา,รับยิงads,รับยิงแอด สายเทา,facebook ads,google ads,google,ads,สอนยิงแอด,สอนยิงแอด Conversion,สอนยิงแอดสายเทา,ยิงแอดสายเทา,ยิงโฆษณาสายเทา,รับทำ seo สายเทา,รับทำ seo สายดำ,แอดสายเทา,รับยิงแอดสายเทา,กูเกิ้ลแอดสายเทา,รับทํา google ads,สายเทา seo สายเทา,ตลาดสีเทา,แอดสีเทา,adsสีเทา,กราฟฟิกสายเทา,ยิงแอดเทา,รับยิงแอดfacebookสายเทา,รูปยิงแอดสายเทา,รับจ้างสายเทา,รับโฆษณาสายเทา" />
@@ -38,8 +33,7 @@ export default function HomePage() {
         <link rel="canonical" href="https://ad-dev.net/" />
         <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
 
-
-        <Script type="application/ld+json" id="structured-data">
+            <Script type="application/ld+json" id="structured-data">
   {`
     {
       "@context": "https://schema.org",
@@ -55,10 +49,6 @@ export default function HomePage() {
     }
   `}
 </Script>
-
-
-
-
 
       </head>
 
