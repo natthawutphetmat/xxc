@@ -10,48 +10,21 @@ const handler = NextAuth({
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials, req) {
-        if (!credentials) {
-          console.error('No credentials provided');
-          throw new Error('Credentials are missing');
-        }
-
-        console.log('Credentials:', credentials);
-
-        try {
-          const res = await fetch('https://api-online.ad-dev.net/login', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              number: credentials.username,
-              password: credentials.password,
-            }),
-          });
-
-          if (!res.ok) {
-            console.error('Failed to login: response status', res.status);
-            throw new Error('Failed to login');
-          }
-
-          const data = await res.json();
-          console.log('API response:', data);
-
-          if (data.accessToken) {
-            return { id: data.userId, name: data.name, email: data.email, token: data.accessToken };
-          } else {
-            console.error('No access token in response');
-            return null;
-          }
-        } catch (error) {
-          console.error('Authorize error:', error);
+        // ตรวจสอบชื่อผู้ใช้และรหัสผ่านที่ส่งมา
+        if (credentials.username === 'admin' && credentials.password === '1122') {
+          // หากชื่อผู้ใช้และรหัสผ่านถูกต้อง ให้คืนค่าข้อมูลผู้ใช้
+          const user = { id: '1', name: 'J Smith', email: 'jsmith@example.com' };
+          return user;
+        } else {
+          // หากไม่ถูกต้อง คืนค่าเป็น null
           return null;
         }
-      },
-    }),
+      }
+    })
   ],
+
   pages: {
-    signIn: '/login',
+    signIn: '/login', // กำหนดหน้าล็อกอิน
   },
   callbacks: {
     async session({ session, token }) {
@@ -62,7 +35,7 @@ const handler = NextAuth({
     async jwt({ token, user }) {
       if (user) {
         token.id = user.id;
-        token.token = user.token;
+        token.token = 'some_generated_token'; // คุณสามารถสร้าง token ที่นี่ตามความเหมาะสม
       }
       return token;
     },
@@ -70,7 +43,7 @@ const handler = NextAuth({
   session: {
     strategy: 'jwt',
   },
-  secret: process.env.NEXTAUTH_SECRET, // Ensure the secret is set
+  secret: process.env.NEXTAUTH_SECRET, // ต้องแน่ใจว่าได้ตั้งค่า secret นี้ใน environment variables
 });
 
 export { handler as GET, handler as POST };
