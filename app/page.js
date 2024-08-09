@@ -1,21 +1,39 @@
 import React from 'react';
 import Link from 'next/link';
- 
-import About from './components/About';
-import AdsImage from './img/AdsImage';
-import Google from './img/google';
-import Cass from './img/cass';
-import Example from './img/Example';
 import Image from 'next/image';
+import About from './components/About';
+import Slider from './components/Slider';
+import Sliderx from './components/Sliderx';
+import AdsImage from './components_img/AdsImage';
+import Google from './components_img/Google';
+import Cass from './components_img/Cass';
+import Example from './components_img/Example';
 import Fbimg from './facebook/fbimg';
 import Itemgg from './google/itemgg';
-import Script from "next/script";
+ 
+import Script from 'next/script';
 
 export default function Page() {
   return (
     <>
-      <head>
-        <title>รับทำโฆษณาออนไลน์ Googleสายเทา, Facebookสายเทา, คอร์สเรียนโฆษณาสายเทา สายเทาเพื่อธุรกิจของคุณ</title>
+      <Script type="application/ld+json" id="structured-data">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "AdsDev",
+            "alternateName": "EC",
+            "url": "https://ad-dev.net/",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://ad-dev.net/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        `}
+      </Script>
+
+      <title>รับทำโฆษณาออนไลน์ Googleสายเทา, Facebookสายเทา, คอร์สเรียนโฆษณาสายเทา สายเทาเพื่อธุรกิจของคุณ</title>
         <meta name="description" content="สำรวจโอกาสใหม่ๆกับทีมการตลาด รับยิงแอดโฆษณาสายเทา สายเทาที่จะช่วยคุณเติบโตด้วยกลยุทธ์การตลาดออนไลน์ที่ล้ำหน้าและเป็นนวัตกรรม แรงบันดาลใจจากทีมผู้เชี่ยวชาญที่มีประสบการณ์ เราช่วยสร้างผลลัพธ์ที่ยั่งยืนให้กับธุรกิจของคุณ." />
         <meta name="keywords" content="ยิงads,facebook,สายเทา,โฆษณา,ยิงads facebook สายเทา,รับยิงads,รับยิงแอด สายเทา,facebook ads,google ads,google,รับยิงแอด,ads,รับทำโฆษณา,รับโฆษณา,Facebook,การตลาด,โฆษณาออนไลน์,เว็บไซต์,ตลาดเป้าหมาย,โฆษณาบนโซเชียลมีเดีย,Google Ads,การโฆษณาบน Facebook,การโฆษณาออนไลน์บนสื่อต่าง ๆ,การตลาดออนไลน์,การโปรโมท,โฆษณา Facebook,การโฆษณา Google,การโฆษณาสินค้า,การโฆษณาโปรโมชั่น,วิธีการโฆษณา,ความสำเร็จในการตลาด,บริการโฆษณา,การตลาดออนไลน์บน Facebook,การโฆษณาบนเว็บ,การวางแผนโฆษณา,รับจ้างโฆษณา ยิงads,facebook,สายเทา,โฆษณา,ยิงads facebook สายเทา,รับยิงads,รับยิงแอด สายเทา,facebook ads,google ads,google,ads,สอนยิงแอด,สอนยิงแอด Conversion,สอนยิงแอดสายเทา,ยิงแอดสายเทา,ยิงโฆษณาสายเทา,รับทำ seo สายเทา,รับทำ seo สายดำ,แอดสายเทา,รับยิงแอดสายเทา,กูเกิ้ลแอดสายเทา,รับทํา google ads,สายเทา seo สายเทา,ตลาดสีเทา,แอดสีเทา,adsสีเทา,กราฟฟิกสายเทา,ยิงแอดเทา,รับยิงแอดfacebookสายเทา,รูปยิงแอดสายเทา,รับจ้างสายเทา,รับโฆษณาสายเทา" />
         <meta property="og:title" content="รับทำโฆษณาออนไลน์ Google, Facebook Ads สายเทาเพื่อธุรกิจของคุณ"/>
@@ -33,25 +51,6 @@ export default function Page() {
         <link rel="canonical" href="https://ad-dev.net/" />
         <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
 
-            <Script type="application/ld+json" id="structured-data">
-  {`
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "AdsDev",
-      "alternateName": "EC",
-      "url": "https://ad-dev.net/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://ad-dev.net/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-  `}
-</Script>
-
-      </head>
-
       <Link href='/line' target='_blank' className="bounce">
         <Image src="/img/line.png" alt="line" className='bounce' width={50} height={50} />
       </Link>
@@ -59,7 +58,7 @@ export default function Page() {
       <div className='container'>
         <header id='header'>
           <h1>รับทำโฆษณาออนไลน์สายเทา</h1>
-          <Example/>
+          <Example />
           <div className='m-3'>
             <h3>รับทำโฆษณาออนไลน์ Googleสายเทา, Facebookสายเทา, คอร์สเรียนโฆษณาสายเทา สายเทาเพื่อธุรกิจของคุณ</h3>
           </div>
@@ -77,7 +76,7 @@ export default function Page() {
           <section className='facebookads' id='facebook'>
             <div className="card mb-3">
               <h2>รับทำโฆษณา Facebook Ads สายเทา</h2>
-              <AdsImage/>
+              <AdsImage />
               <div className="card-body">
                 <h3 className="card-title">รับทำโฆษณา Facebook Ads สายเทา</h3>
                 <p className="card-text">
@@ -108,7 +107,7 @@ export default function Page() {
             </div>
             <div className="card mb-3">
               <h2>รับทำโฆษณา Google สายเทา</h2>
-              <Google/>
+              <Google />
               <div className="card-body">
                 <h3 className="card-title">การรับทำโฆษณา Google และ SEO: เคล็ดลับและปัญหาที่ควรระวัง</h3>
                 <p className="card-text">
@@ -142,7 +141,7 @@ export default function Page() {
             </div>
             <div className="card mb-3">
               <h2>คอร์สสอนการตลาดออนไลน์ Facebook และ Google สายเทา</h2>
-              <Cass/>
+              <Cass />
               <div className="card-body">
                 <h3 className="card-title">คอร์สสอนการตลาดออนไลน์ Facebook และ Google: เปิดโลกใหม่ให้กับธุรกิจของคุณ</h3>
                 <p className="card-text">
@@ -163,26 +162,11 @@ export default function Page() {
             </div>
           </section>
 
-        <main id="post">
+          <About />
+          <Fbimg />
+          <Itemgg />
 
-        
-
-          
-
-
-        </main>
-
-       
-       
-        </section>
-
-        <About />
-        <Fbimg />
-        <Itemgg />
-
-        <section className='about' id='about'>
-       
-
+          <section className='about' id='about'></section>
         </section>
       </div>
     </>

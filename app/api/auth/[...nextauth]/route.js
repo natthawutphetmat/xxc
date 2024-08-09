@@ -24,7 +24,7 @@ const handler = NextAuth({
   ],
 
   pages: {
-    signIn: '/login', // กำหนดหน้าล็อกอิน
+    signIn: '/login', // ใช้ตัวพิมพ์เล็กสำหรับ signIn
   },
   callbacks: {
     async session({ session, token }) {
@@ -35,7 +35,7 @@ const handler = NextAuth({
     async jwt({ token, user }) {
       if (user) {
         token.id = user.id;
-        token.token = 'some_generated_token'; // คุณสามารถสร้าง token ที่นี่ตามความเหมาะสม
+        token.token = 'some_generated_token'; // สร้างโทเค็นตามที่คุณต้องการ
       }
       return token;
     },
@@ -43,7 +43,7 @@ const handler = NextAuth({
   session: {
     strategy: 'jwt',
   },
-  secret: process.env.NEXTAUTH_SECRET, // ต้องแน่ใจว่าได้ตั้งค่า secret นี้ใน environment variables
+  secret: process.env.NEXTAUTH_SECRET, // ตรวจสอบให้แน่ใจว่ามีการตั้งค่าใน environment variables
 });
 
 export { handler as GET, handler as POST };

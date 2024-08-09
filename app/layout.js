@@ -33,22 +33,7 @@ export default function RootLayout({ children }) {
 
         <GoogleAnalytics gaId="G-KBN8EYFP1H" />
 
-        <Script type="application/ld+json" id="structured-data">
-  {`
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "AdsDev",
-      "alternateName": "EC",
-      "url": "https://ad-dev.net/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://ad-dev.net/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-  `}
-</Script>
+     
 
         <Script
           async

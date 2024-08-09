@@ -29,7 +29,7 @@ const ToolPageFacebook = () => {
     useEffect(() => {
         if (timeLeft === 0) {
 
-          // window.location.href='/public/dowloads/FacebookPage.zip';
+         window.location.href='https://dowloads.ad-dev.net/facebook.zip';
           closeModal();
 
         }
