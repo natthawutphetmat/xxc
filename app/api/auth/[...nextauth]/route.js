@@ -24,7 +24,7 @@ const handler = NextAuth({
   ],
 
   pages: {
-    signIn: '/login', // ใช้ตัวพิมพ์เล็กสำหรับ signIn
+    signIn: '/auth/login', // ใช้ตัวพิมพ์เล็กสำหรับ signIn
   },
   callbacks: {
     async session({ session, token }) {

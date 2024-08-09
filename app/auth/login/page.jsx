@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { getCsrfToken, useSession } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
 
-export default function SignIn() {
+function SignInComponent() {
   const [csrfToken, setCsrfToken] = useState('');
   const { data: session } = useSession();
   const router = useRouter();
@@ -42,5 +42,13 @@ export default function SignIn() {
         </form>
       </div>
     </>
+  );
+}
+
+export default function SignInPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SignInComponent />
+    </Suspense>
   );
 }
