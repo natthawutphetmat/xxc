@@ -1,5 +1,5 @@
 "use client";
-
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 export default function Home() {
@@ -7,12 +7,12 @@ export default function Home() {
   const totalSlides = 6; // จำนวนรูปภาพทั้งหมด
   const visibleSlides = 3; // จำนวนรูปที่แสดงพร้อมกัน
   const imageUrls = [
-    '/review/r1.jpg',
-    '/review/r2.jpg',
-    '/review/r3.jpg',
-    '/review/r4.jpg',
-    '/review/r5.jpg',
-    '/review/r6.jpg',
+    '/review/r1.webp',
+    '/review/r2.webp',
+    '/review/r3.webp',
+    '/review/r4.webp',
+    '/review/r5.webp',
+    '/review/r6.webp',
   
   ];
 
@@ -29,10 +29,12 @@ export default function Home() {
       <div className="slides" style={{ transform: `translateX(-${currentIndex * (100 / visibleSlides)}%)` }}>
         {imageUrls.map((src, index) => (
           <div className="slide" key={index}>
-            <img src={src} alt={`รูปภาพ ${index + 1}`} />
+             <Image src={src} alt={`รูปภาพ ${index + 1}`} width={400} height={600} />
           </div>
         ))}
       </div>
     </div>
   );
 }
+
+

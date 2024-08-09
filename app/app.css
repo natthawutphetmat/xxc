@@ -1,107 +1,60 @@
-body, h3, p, ul, li, a, input, button {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.footer {
-  background-color: #282828;
-  color: #f0f0f0;
-  padding: 60px 20px;
-  font-family: 'Arial', sans-serif;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
+.boxfb {
+  border: solid;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
-.footer-column {
-  flex: 1;
-  min-width: 250px;
-  margin: 20px;
+.itemfb {
+  width: 50%;
+  border: 1px solid red;
 }
 
-.footer-column h3 {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+.itemfb img{
+width: 100%;
+
 }
 
-.footer-column p, .footer-column ul {
-  font-size: 0.9em;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links li {
-  margin-bottom: 10px;
-}
-
-.footer-links a {
-  color: #b0b0b0;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #ffffff;
-}
-
-.footer-socials {
+.boxgg {
+ 
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
-.footer-socials a {
-  margin-right: 15px;
-  transition: transform 0.3s ease;
+.itemgg {
+  width: 50%;
+  border: 1px solid red;
 }
 
-.footer-socials a:hover {
-  transform: scale(1.1);
+.itemgg img{
+width: 100%;
+
 }
 
-.footer-input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #444;
-  background-color: #333;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
 
-.footer-button {
-  background-color: #00bcd4;
-  border: none;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-.footer-button:hover {
-  background-color: #0097a7;
-}
 
-.footer-bottom {
-  text-align: center;
-  padding: 20px 0;
-  border-top: 1px solid #444;
-  margin-top: 40px;
-  color: #888;
-}
 
-.footer-bottom p {
-  margin: 0;
-  font-size: 0.9em;
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+
+  .itemfb {
+    width: 50%;
+    border: 1px solid rgb(30, 255, 0);
+    height: 100px;
+  }
+
+
+
+
 }
