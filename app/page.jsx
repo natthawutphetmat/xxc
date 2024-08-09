@@ -9,7 +9,7 @@ import Example from './img/Example';
 import Image from 'next/image';
 import Fbimg from './facebook/fbimg';
 import Itemgg from './google/itemgg';
-
+import Script from "next/script";
 
 export default function Page() {
   return (
@@ -32,6 +32,24 @@ export default function Page() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ad-dev.net/" />
         <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+            <Script type="application/ld+json" id="structured-data">
+  {`
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AdsDev",
+      "alternateName": "EC",
+      "url": "https://ad-dev.net/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://ad-dev.net/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  `}
+</Script>
+
       </head>
 
       <Link href='/line' target='_blank' className="bounce">
