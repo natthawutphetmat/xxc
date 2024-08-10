@@ -19,12 +19,12 @@ export default function Page() {
           {
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "name": "AdsDev",
+            "name": "myadsdep",
             "alternateName": "EC",
-            "url": "https://ad-dev.net/",
+            "url": "https://myadsdep.com/",
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://ad-dev.net/search?q={search_term_string}",
+              "target": "https://myadsdep.com/search?q={search_term_string}",
               "query-input": "required name=search_term_string"
             }
           }
@@ -46,7 +46,7 @@ export default function Page() {
         <meta property="twitter:image" content="https://ad-dev.net/img/ads.webp"/>
         <meta property="twitter:url" content="https://ad-dev.net/" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ad-dev.net/" />
+        <link rel="canonical" href="https://myadsdep.com/" />
         <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
 
       <Link href='/line' target='_blank' className="bounce">
